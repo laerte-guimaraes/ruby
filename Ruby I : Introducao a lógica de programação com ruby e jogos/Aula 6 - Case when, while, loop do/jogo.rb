@@ -94,7 +94,7 @@ def jogar(nome, dificuldade)
 	puts "\n Você obteve #{pontuacao} !"
 end
 
-def quer_jogar
+def quer_jogar?
 	puts 'Deseja jogar novamente? (S/N)'
 	gets.strip.upcase == 'S'
 end
@@ -150,7 +150,7 @@ dificuldade = pede_dificuldade
 
 loop do
 	jogar(nome, dificuldade)
-	if !quer_jogar
+	if !quer_jogar?
 		break
 	end
 end
