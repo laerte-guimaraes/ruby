@@ -5,7 +5,7 @@ def boas_vindas
     puts "   n_n | ||. .|| | n_n         Bem vindo ao    "
     puts "   |_|_|nnnn nnnn|_|_|     Jogo de Adivinhação!"
     puts "  |' '  |  |_|  |'  ' |                        "
-    puts "  |_____| ' _ ' |_____|                        " 
+    puts "  |_____| ' _ ' |_____|                        "
     puts "        \\__|_|__/                             "
     puts
 	puts "Qual é o seu nome?"
@@ -74,7 +74,7 @@ end
 def jogar(nome, dificuldade)
 
 	numero_secreto = gera_numero(dificuldade)
-	limite_de_tentativas = 5 * dificuldade
+	limite_de_tentativas = dificuldade / 5
 	chutes = []
 	total_de_chutes = 0
 	pontuacao = 1000
