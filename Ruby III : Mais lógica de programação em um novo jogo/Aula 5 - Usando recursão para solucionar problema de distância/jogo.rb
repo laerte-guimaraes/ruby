@@ -10,7 +10,7 @@ def joga nome
 		hero_man = encontra_jogador mapa
 		nova_posicao = hero_man.calcula_nova_posicao direcao
 
-		next if nova_posicao and !posicao_valida? mapa, nova_posicao.to_array
+		next if !nova_posicao or !posicao_valida? mapa, nova_posicao.to_array
 		hero_man.remove_do mapa
 		if mapa[nova_posicao.linha][nova_posicao.coluna] == '*'
 			explode mapa, nova_posicao
