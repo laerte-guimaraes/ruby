@@ -1,0 +1,8 @@
+<h1>Bem-vindo ao Task List!</h1>
+<h3>Sua lista de tarefas:</h3>
+
+<!-- Lembre-se que tudo que quer mostrar deve vir com um = na frente. -->
+<!-- No nosso exemplo, não queremos imprimir a iteração (each), somente a descrição das tarefas -->
+<% @tasks.each do |task| %>
+  <%= task.description %>
+<% end %>
