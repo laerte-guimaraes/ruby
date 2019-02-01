@@ -23,7 +23,12 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.update(params.require(:task).permit(:description, :status))
-    redirect_to root_path
+
+    if @task.save # redireciona para root se for possível salvar
+      redirect_to root_path
+    else 
+      render :new # retorna os erros na própria página de criação
+    end
   end
 
   def destroy

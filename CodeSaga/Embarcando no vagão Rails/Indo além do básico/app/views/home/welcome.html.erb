@@ -4,11 +4,12 @@
 <!-- Lembre-se que tudo que quer mostrar deve vir com um = na frente. -->
 <!-- No nosso exemplo, não queremos imprimir a iteração (each), somente a descrição das tarefas -->
 <% @tasks.each do |task| %>
-  *
-  <%= task.description %>
+  <div style="background-color:lightgray; margin: 20px; padding: 5px;">
+  <p><%= task.description %></p>
+  <p><%= task.category.name %></p>
   <!-- caminho para editar esse objeto especifico -->
   <%= link_to 'Editar', edit_task_path(task) %> 
   <%= link_to 'Apagar', task_path(task), method: :delete,
     data: { confirm: 'Quer apagar esta tarefa?' } %>
-  <br>
+  </div>
 <% end %>
